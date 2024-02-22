@@ -152,8 +152,8 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   physicalParameters:
-    m_Iso: 200
-    m_ShutterSpeed: 0.005
+    m_Iso: 400
+    m_ShutterSpeed: 0.008333334
     m_Aperture: 16
     m_BladeCount: 5
     m_Curvature: {x: 2, y: 11}
@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65d1fdc35027290e9b91e2c6ecab1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  publishHz: 10
   imageOnGui:
     show: 1
     scale: 4
