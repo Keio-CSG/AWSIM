@@ -104,6 +104,7 @@ namespace AWSIM
 
             // const parameters.
             const string EmissiveColor = "_EmissiveColor";
+            const string EmissiveColorURP = "_EmissionColor";
             const string EmissiveIntensity = "_EmissiveIntensity";
             const string EmissiveExposureWeight = "_EmissiveExposureWeight";
             const float flashIntervalSec = 0.5f;                // flash bulb lighting interval(sec).
@@ -132,8 +133,13 @@ namespace AWSIM
                 material = renderer.materials[materialIndex];
 
                 // cache default material parameters.
+#if USE_URP
+                material.DisableKeyword("_EMISSION");
+                defaultEmissiveColor = material.GetColor(EmissiveColorURP);
+#else
                 defaultEmissiveColor = material.GetColor(EmissiveColor);
                 defaultEmissiveExposureWeight = material.GetFloat(EmissiveExposureWeight);
+#endif
 
                 initialized = true;
             }
@@ -209,6 +215,23 @@ namespace AWSIM
             /// <param name="isLightOn">Light up bulb</param>
             void Set(bool isLightOn)
             {
+#if USE_URP
+                if (isLightOn)
+                {
+                    var config = bulbColorConfigPairs[color];
+                    material.EnableKeyword("_EMISSION");
+                    material.SetColor(EmissiveColorURP, config.Color * config.Intensity * 0.2f);
+                    this.isLightOn = true;
+                    timer = 0;
+                }
+                else
+                {
+                    material.DisableKeyword("_EMISSION");
+                    material.SetColor(EmissiveColorURP, defaultEmissiveColor);
+                    this.isLightOn = false;
+                    timer = 0;
+                }
+#else
                 if (isLightOn)
                 {
                     var config = bulbColorConfigPairs[color];
@@ -224,6 +247,7 @@ namespace AWSIM
                     this.isLightOn = false;
                     timer = 0;
                 }
+#endif
             }
         }
 
