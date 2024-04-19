@@ -1297,7 +1297,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -4448,7 +4448,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -6283,7 +6283,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -6880,6 +6880,20 @@ MonoBehaviour:
   - {x: -42.585938, y: 19.49, z: 8.944092}
   hasStopSign: 0
   trafficLight: {fileID: 0}
+--- !u!114 &4136363659337275495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502673707111489615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a3d7a4e8adf6c65b2f392cbdc5059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wayID: 359
+  relationID: f203000000000000
 --- !u!114 &7155441451549148725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6915,20 +6929,6 @@ MonoBehaviour:
     materialIndex: 1
   - bulbType: 10
     materialIndex: 2
---- !u!114 &4136363659337275495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502673707111489615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20a3d7a4e8adf6c65b2f392cbdc5059a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wayID: 359
-  relationID: f203000000000000
 --- !u!1 &3515309342893285154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8895,7 +8895,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -10672,7 +10672,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -11241,7 +11241,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -14164,7 +14164,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
@@ -15754,7 +15754,7 @@ MonoBehaviour:
   bulbEmissionConfigs:
   - BulbColor: 2
     Color: {r: 0.3647059, g: 0.9098039, b: 0.75686276, a: 1}
-    Intensity: 40
+    Intensity: 20
     ExposureWeight: 0.8
   - BulbColor: 1
     Color: {r: 0.8627451, g: 0.6156863, b: 0.03137255, a: 1}
