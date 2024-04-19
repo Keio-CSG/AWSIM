@@ -102,6 +102,7 @@ namespace AWSIM
             bool isOn = false;
 
             const string EmissiveColor = "_EmissiveColor";
+            const string EmissiveColorURP = "_EmissionColor";
             const string EmissiveExposureWeight = "_EmissiveExposureWeight";
 
             public void Initialize()
@@ -109,9 +110,14 @@ namespace AWSIM
                 if (material == null)
                 {
                     material = meshRenderer.materials[materialIndex];
+#if USE_URP
+                    material.DisableKeyword("_EMISSION");
+                    defaultEmissiveColor = material.GetColor(EmissiveColorURP);
+#else
                     material.EnableKeyword("_EMISSION");
                     defaultEmissiveColor = material.GetColor(EmissiveColor);
                     defaultExposureWeight = material.GetFloat(EmissiveExposureWeight);
+#endif
                 }
             }
 
@@ -121,6 +127,18 @@ namespace AWSIM
                     return;
 
                 this.isOn = isLightOn;
+#if USE_URP
+                if (isLightOn)
+                {
+                    material.EnableKeyword("_EMISSION");
+                    material.SetColor(EmissiveColorURP, lightingColor * lightingIntensity);
+                }
+                else
+                {
+                    material.DisableKeyword("_EMISSION");
+                    material.SetColor(EmissiveColorURP, defaultEmissiveColor);
+                }
+#else
                 if (isLightOn)
                 {
                     material.SetColor(EmissiveColor, lightingColor * lightingIntensity);
@@ -131,6 +149,7 @@ namespace AWSIM
                     material.SetColor(EmissiveColor, defaultEmissiveColor);
                     material.SetFloat(EmissiveExposureWeight, defaultExposureWeight);
                 }
+#endif
             }
 
             public void Destroy()
