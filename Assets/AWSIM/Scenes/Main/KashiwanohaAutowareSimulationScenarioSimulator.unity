@@ -166,12 +166,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645900691}
     m_Modifications:
+    - target: {fileID: 698603588, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4782592903285125445, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
       propertyPath: egoVehicleTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4782592903285125448, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8891622122904022409, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891622124088139149, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8891622124164913536, guid: 5de36fcbae61c6b29986f4f10b140fac, type: 3}
